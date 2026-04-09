@@ -8,8 +8,8 @@ import { rateLimiter } from "./middlewares/rate.limit";
 
 const app = express();
 app.use(express.json());
-
-app.get("/health", rateLimiter, (req, res) => {
+app.use(errorHandler, rateLimiter);
+app.get("/health", (req, res) => {
   res.json({ message: "pg-json-server đang chạy! " });
 });
 
