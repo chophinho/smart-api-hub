@@ -45,16 +45,20 @@ src/
 ## ⚙️ Cài đặt & Chạy ứng dụng
 
 ### 1. Yêu cầu hệ thống
+
 - Node.js (v18+)
 - PostgreSQL (nếu chạy local) hoặc Docker.
 
 ### 2. Cài đặt dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Cấu hình môi trường
+
 Tạo file `.env` dựa trên cấu trúc sau:
+
 ```env
 DB_HOST=localhost
 DB_PORT=5432
@@ -65,18 +69,22 @@ JWT_SECRET=your_jwt_secret
 ```
 
 ### 4. Khởi chạy
+
 #### Chế độ phát triển (Development):
+
 ```bash
 npm run dev
 ```
 
 #### Chế độ Production:
+
 ```bash
 npm run build
 npm start
 ```
 
 #### Sử dụng Docker:
+
 ```bash
 docker-compose up -d
 ```
@@ -86,12 +94,14 @@ docker-compose up -d
 ## 📡 API Endpoints
 
 ### 🔐 Authentication
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/auth/register` | Đăng ký người dùng mới |
-| `POST` | `/auth/login` | Đăng nhập và nhận Token |
+
+| Method | Endpoint         | Description             |
+| :----- | :--------------- | :---------------------- |
+| `POST` | `/auth/register` | Đăng ký người dùng mới  |
+| `POST` | `/auth/login`    | Đăng nhập và nhận Token |
 
 ### 📦 Resources (CRUD)
+
 Tài nguyên có thể là bất kỳ bảng nào như `posts`, `comments`, `users`...
 | Method | Endpoint | Auth | Description |
 | :--- | :--- | :--- | :--- |
@@ -104,5 +114,8 @@ Tài nguyên có thể là bất kỳ bảng nào như `posts`, `comments`, `use
 
 ---
 
-## 📝 Giấy phép
-Dự án được phát hành dưới giấy phép **ISC**.
+## Deploy use Render
+
+```
+https://smart-api-hub-msxi.onrender.com/health
+```
